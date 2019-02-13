@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" media="screen" href = "{{ url_for('static', filename='bootstrap.min.css') }}">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+</script>
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Secular+One');
+  body {
+    font: 20px 'Secular One', sans-serif;
+    color: #f5f6f;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    background-color: #FFD2FC;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  .bg-1 {
+    background-color: #E980FC;
+    color: #ffffff;
+  }
+  .bg-2 {
+    background-color: #B96AC9;
+    color: #ffffff;
+  }
+  .bg-3 {
+    background-color: #231B1B;
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .button1{
+  border : 2px solid white;
+  padding: 8px 15px 8px 15px;
+  width: 270px;
+  font-size: 20px;
+}
+.button2{
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: Asap, sans-serif;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  background-color: black;
+}
+.button2:hover{
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Your Vote</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/results">Results</a></li>
+        {% if session.log %}
+          <li><a href="/logout">Logout</a></li>
+        {% else %}
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+    {% include "includes/_message.html" %}
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

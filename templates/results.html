@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container-fluid bg-1 text-center">
+  <h1 class="margin">Live Count</h1>
+</div>
+<div class="container-fluid bg-2 text-center">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Indian Elections</h2>
+      {% for e in votes %}
+        {{ e }} : {{ votes[e] }}<br>
+      {% endfor %}
+    </div>
+    <div class="col-sm-6">
+      <h2>Most Liked Social Media Website</h2>
+      <ul>
+      {% for r in votes1 %}
+        <li>{{ r }} : {{ votes1[r] }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid bg-3 text-center">
+  <p>Made By <a href="https://facebook.com/namanthakur22">Naman Thakur</a></p>
+</footer>
+{% endblock %}

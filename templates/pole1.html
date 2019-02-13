@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Choose your favourite Political Party</h3><br>
+  <form action="/thanks">
+    <div class="row">
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+        <span class="button1"><label class="radio-inline"><input type="radio" name="value" value="BJP" required>BJP</span>
+      </div>
+      <div class="col-sm-2">
+        <span class="button1"><label class="radio-inline"><input type="radio" name="value" value="CONGRESS">CONGRESS</span>
+      </div>
+      <div class="col-sm-2">
+        <span class="button1"><label class="radio-inline"><input type="radio" name="value" value="AAP">AAP</span>
+      </div>
+      <div class="col-sm-2">
+        <span class="button1"><label class="radio-inline"><input type="radio" name="value" value="NOTA">NOTA</span>
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <input type="submit" value="Submit Vote" class="button2">
+    </div>
+  </form>
+</div>
+<footer class="container-fluid bg-3 text-center">
+  <p>Made By <a href="https://facebook.com/namanthakur22">Naman Thakur</a></p>
+</footer>
+{% endblock %}

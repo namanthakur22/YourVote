@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Free Online Voting Portal - Let you vote from anywhere</h3>
+</div>
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Ongoing Polls</h3><br>
+  <div class="row">
+    <div class="col-sm-6">
+      <center><img src="/static/images/election.png" class="img-responsive margin" style="width:20%" alt="Image"></center>
+      <h3>Indian Election</h3>
+      <a href="/login" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-ok"></span>  Vote Now</a>
+    </div>
+    <div class="col-sm-6">
+      <center><img src="/static/images/ipl.png" class="img-responsive margin" style="width:20%" alt="Image"></center>
+      <h3>Social Media</h3>
+      <a href="/login" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-ok"></span>  Vote Now</a>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid bg-3 text-center">
+  <p>Made By <a href="https://facebook.com/namanthakur22">Naman Thakur</a></p>
+</footer>
+{% endblock %}
